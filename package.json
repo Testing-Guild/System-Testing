@@ -1,0 +1,32 @@
+{
+  "name": "system-testing",
+  "version": "1.0.0",
+  "description": "System testing verifies a complete system meets all requirements & performs well. It checks functionality, performance, security & usability from an end-user perspective.",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha --require ts-node/register test/**.spec.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Testing-Guild/System-Testing.git"
+  },
+  "keywords": [
+    "system-testing",
+    "system-test",
+    "system"
+  ],
+  "author": "Mahdi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Testing-Guild/System-Testing/issues"
+  },
+  "homepage": "https://github.com/Testing-Guild/System-Testing#readme",
+  "devDependencies": {
+    "@types/chai": "^4.3.16",
+    "@types/mocha": "^10.0.6",
+    "chai": "^4.3.7",
+    "mocha": "^10.4.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.5"
+  }
+}
