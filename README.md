@@ -109,7 +109,6 @@ The ideal system testing tool depends on several factors, including:
 * **Budgetary Constraints:**  Commercial tools often come with licensing fees, while open-source options are freely available.
 * **Team Expertise:**  The team's existing skillset and comfort level with various tools should be considered.
 * **Scalability Needs:**  The tool should be able to accommodate the testing demands of the project as it grows.
-
 ## How E2E testing builds upon System testing  
 
 System testing and End-to-End (E2E) testing are both crucial phases in the software development lifecycle, but they serve distinct purposes and build upon each other. Here's a detailed explanation of how E2E testing complements and expands upon the groundwork laid by system testing:
