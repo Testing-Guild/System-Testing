@@ -109,3 +109,27 @@ The ideal system testing tool depends on several factors, including:
 * **Budgetary Constraints:**  Commercial tools often come with licensing fees, while open-source options are freely available.
 * **Team Expertise:**  The team's existing skillset and comfort level with various tools should be considered.
 * **Scalability Needs:**  The tool should be able to accommodate the testing demands of the project as it grows.
+
+## How E2E testing builds upon System testing  
+
+System testing and End-to-End (E2E) testing are both crucial phases in the software development lifecycle, but they serve distinct purposes and build upon each other. Here's a detailed explanation of how E2E testing complements and expands upon the groundwork laid by system testing:
+
+**System Testing: The Building Blocks**
+
+Imagine system testing as meticulously constructing the individual components of a house – the walls, the roof, the plumbing, and the electrical wiring. Each component is rigorously tested to ensure it functions as intended. This phase focuses on verifying the internal workings and interactions between various modules of the application. It employs a black-box approach, meaning testers interact with the application from a user's perspective, unaware of the intricate internal code.
+
+**E2E Testing: The User Journey Experience**
+
+E2E testing, on the other hand, takes the constructed house and simulates a walkthrough – a real user experience. It mimics how a user would interact with the application from start to finish, performing a series of actions and validating the expected outcomes across the entire system. It's like inviting someone to walk through your newly built house, checking if all the doors open, lights turn on, and water flows smoothly.
+
+**Building Upon the Foundation**
+
+Here's how E2E testing leverages the groundwork laid by system testing:
+
+* **System Testing as the Prerequisite:**  E2E testing relies on a stable and well-functioning system as its foundation. System testing ensures individual components work as intended and interact seamlessly before E2E testing can comprehensively evaluate the user experience.
+
+* **Focus on User Experience:**  While system testing verifies the functionality of individual parts, E2E testing focuses on how those parts work together to deliver a cohesive and user-friendly experience. It identifies issues that might go undetected during system testing, such as inconsistencies in data flow or navigation flow across different modules.
+
+* **Integration and Interaction:**  System testing ensures modules work together, but E2E testing goes a step further. It validates how user interactions with various functionalities trigger seamless responses across the entire system. Imagine flipping a light switch (user interaction) and verifying the light turns on (expected response) – not just that the light bulb and switch are functional individually.
+
+* **Real-World Scenarios:**  E2E testing often leverages automated tools to simulate real-world user journeys. This helps uncover issues that might not be apparent during isolated unit or integration testing. It's like testing the house under real-life conditions, simulating how users would interact with it in their daily lives.
