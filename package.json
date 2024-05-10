@@ -5,7 +5,6 @@
   "main": "index.js",
   "scripts": {
     "test": "mocha --require ts-node/register test/**.spec.ts",
-    "dev": "node --watch ./src/api.js",
     "dev:test": "node --test --watch ./test/api.test.js"
   },
   "repository": {
