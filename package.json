@@ -4,7 +4,8 @@
   "description": "System testing verifies a complete system meets all requirements & performs well. It checks functionality, performance, security & usability from an end-user perspective.",
   "main": "index.js",
   "scripts": {
-    "test": "mocha --require ts-node/register test/**.spec.ts"
+    "test": "mocha --require ts-node/register test/**.spec.ts",
+    "test:js":"mocha"
   },
   "repository": {
     "type": "git",
@@ -25,7 +26,6 @@
     "@types/chai": "^4.3.16",
     "@types/mocha": "^10.0.6",
     "chai": "^4.3.7",
-    "jsonwebtoken": "^9.0.2",
     "mocha": "^10.4.0",
     "mongodb": "^6.6.1",
     "mongodb-memory-server": "^9.2.0",

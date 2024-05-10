@@ -1,4 +1,4 @@
-import { user } from "../db.json";
+import { user } from "../db.json" 
 export const authService = {
   login: async (username, password) => {
     try {
