@@ -4,8 +4,7 @@
   "description": "System testing verifies a complete system meets all requirements & performs well. It checks functionality, performance, security & usability from an end-user perspective.",
   "main": "index.js",
   "scripts": {
-    "test": "mocha --require ts-node/register test/**.spec.ts",
-    "dev:test": "node --test --watch ./test/api.test.js"
+    "test": "mocha --require ts-node/register test/**.spec.ts"
   },
   "repository": {
     "type": "git",
