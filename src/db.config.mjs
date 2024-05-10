@@ -6,9 +6,7 @@ export class ConnectionDatabase {
     });
   }
   disconnect() {
-    if (this.server instanceof MongoMemoryServer) {
-      this.server.stop();
-    }
+    this.server.stop();
   }
   uri() {
     return this.server.getUri();
