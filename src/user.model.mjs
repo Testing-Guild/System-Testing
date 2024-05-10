@@ -1,3 +1,5 @@
+import { ConnectionDatabase } from "./db.config.mjs";
+
 export class User {
   constructor(username, password) {
     this.username = username;
@@ -5,7 +7,6 @@ export class User {
     this.create();
   }
   create() {
-    const 
     return { "username:": this.username, password: this.password };
   }
 }

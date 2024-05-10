@@ -1,4 +1,3 @@
-import mongodb from "mongodb";
 import { MongoMemoryServer } from "mongodb-memory-server";
 export class ConnectionDatabase {
   constructor() {
@@ -11,8 +10,5 @@ export class ConnectionDatabase {
   }
   uri() {
     return this.server.getUri();
-  }
-  connectDb() {
-    return mongodb.MongoClient.connect(this.uri());
   }
 }
