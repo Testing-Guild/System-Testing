@@ -4,11 +4,10 @@ import { ConnectionDatabase } from "../src/db.config.mjs";
 import { User } from "../src/user.model.mjs";
 
 describe("system test", () => {
-  test("Login with valid credentials (system test)", async () => {
+  it("Login with valid credentials (system test)", async () => {
     let server = new ConnectionDatabase();
 
-    const user = new User("user1", "password1");
-
+    const user = new User("user1", "hashed_password1").create();
     const isLoggedIn = await authService.login(user.username, user.password);
     expect(isLoggedIn).to.deep.equal({
       success: true,
@@ -18,7 +17,7 @@ describe("system test", () => {
     await server.disconnect();
   });
 
-  test("Login with invalid username (system test)", async () => {
+  it("Login with invalid username (system test)", async () => {
     let server = new ConnectionDatabase();
 
     const isLoggedIn = await authService.login("invalid_user", "password1");
@@ -30,7 +29,7 @@ describe("system test", () => {
     await server.disconnect();
   });
 
-  test("Login with invalid password (system test)", async () => {
+  it("Login with invalid password (system test)", async () => {
     let server = new ConnectionDatabase();
 
     const isLoggedIn = await authService.login("user1", "invalid_password");

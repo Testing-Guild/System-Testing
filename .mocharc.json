@@ -1,0 +1,4 @@
+{
+  "extensions": ["mjs", "cjs", "js"],
+  "spec": ["**/*.spec.+(mjs|cjs|js)"]
+}

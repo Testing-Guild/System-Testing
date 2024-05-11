@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "mocha --require ts-node/register test/**.spec.ts",
-    "test:js":"mocha"
+    "test:js": "mocha"
   },
   "repository": {
     "type": "git",
@@ -27,8 +27,6 @@
     "@types/mocha": "^10.0.6",
     "chai": "^4.3.7",
     "mocha": "^10.4.0",
-    "mongodb": "^6.6.1",
-    "mongodb-memory-server": "^9.2.0",
     "ts-node": "^10.9.2",
     "typescript": "^5.4.5"
   }
