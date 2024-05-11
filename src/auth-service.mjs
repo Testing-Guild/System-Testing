@@ -1,8 +1,10 @@
-import { user } from "../db.json" 
+import fs from "fs";
+const user = JSON.parse(fs.readFileSync("db.json", "utf-8"));
 export const authService = {
   login: async (username, password) => {
     try {
-      const foundUser = user.find((u) => u.username === username);
+      const db = JSON.stringify(user);
+      const foundUser = db.find((u) => u.username === username);
 
       if (!foundUser) {
         return { message: "Invalid username or password.", success: false };
