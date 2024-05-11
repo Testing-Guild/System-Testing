@@ -1,4 +1,4 @@
-module system-test
+module System-Testing
 
 go 1.22.2
 
