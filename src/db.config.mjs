@@ -5,10 +5,11 @@ export class ConnectionDatabase {
       MongoMemoryServer.create();
     });
   }
-  disconnect() {
-    this.server.stop();
+  async disconnect() {
+    await this.server.stop();
   }
-  uri() {
-    return this.server.getUri();
+  async uri() {
+    const uri = await this.server.getUri();
+    return uri;
   }
 }

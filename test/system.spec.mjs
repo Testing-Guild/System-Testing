@@ -9,7 +9,7 @@ test("Login with valid credentials (system test)", async () => {
   const isLoggedIn = await authService.login(user1.username, user1.password);
   expect(isLoggedIn).toBeTruthy();
 
-  server.disconnect();
+  await server.disconnect();
 });
 
 test("Login with invalid username (system test)", async () => {
@@ -18,7 +18,7 @@ test("Login with invalid username (system test)", async () => {
   const isLoggedIn = await authService.login("invalid_user", "password1");
   expect(isLoggedIn).toBeFalsy();
 
-  server.disconnect();
+  await server.disconnect();
 });
 
 test("Login with invalid password (system test)", async () => {
@@ -27,5 +27,5 @@ test("Login with invalid password (system test)", async () => {
   const isLoggedIn = await authService.login("user1", "invalid_password");
   expect(isLoggedIn).toBeFalsy();
 
-  server.disconnect();
+  await server.disconnect();
 });
