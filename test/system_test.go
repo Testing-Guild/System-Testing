@@ -8,12 +8,13 @@ import (
 
 	"github.com/stretchr/testify/assert"
 )
+
 type User struct {
 	Username string `json:"username"`
 	Password string `json:"password"`
 }
 type DB struct {
-	User User `json:"user"`
+    User []User `json:"user"` 
 }
 type AuthService struct {
 	dbPath string
@@ -33,16 +34,13 @@ func (a *AuthService) Login(username, password string) (map[string]string, error
 	if err != nil {
 		return nil, fmt.Errorf("error parsing user data: %w", err)
 	}
-
-	if db.User.Username != username {
-		return map[string]string{"message": "Invalid username or password.", "success": "false"}, nil
+	for _, user := range db.User {
+		if user.Username == username && user.Password == password {
+			return map[string]string{"message": "Login successful!", "success": "true"}, nil
+		}
 	}
 
-	if db.User.Password != password {
-		return map[string]string{"message": "Invalid username or password.", "success": "false"}, nil
-	}
-
-	return map[string]string{"message": "Login successful!", "success": "true"}, nil
+	return map[string]string{"message": "Invalid username or password.", "success": "false"}, nil
 }
 func NewUser(username, password string) *User {
 	return &User{Username: username, Password: password}
@@ -51,7 +49,7 @@ func NewUser(username, password string) *User {
 func TestLoginWithValidCredentials(t *testing.T) {
 	service := NewAuthService("../db.json")
 
-	user := NewUser("user1", "hashed_password1")
+	user := NewUser("user2", "hashed_password2")
 	isLoggedIn, err := service.Login(user.Username, user.Password)
 
 	assert.NoError(t, err)
