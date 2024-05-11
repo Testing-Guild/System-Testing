@@ -7,7 +7,7 @@ describe("system test in ts",()=>{
     it("Login with valid credentials (system test)", async () => {
         let server = new ConnectionDB();
     
-        const user = new User("user1", "hashed_password1").create();
+        const user = new User("user2", "hashed_password2").create();
         const isLoggedIn = await authService.login(user.username, user.password);
         expect(isLoggedIn).to.deep.equal({
           success: true,
