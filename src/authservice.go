@@ -1,4 +1,4 @@
-package auth
+package authservice
 
 import (
 	"encoding/json"
@@ -35,7 +35,7 @@ func (a *AuthService) Login(username, password string) (map[string]string, error
 	  return map[string]string{"message": "Invalid username or password.", "success": "false"}, nil
 	}
   
-	if db.User.Password != password { // **Security Concern - Replace with secure hashing**
+	if db.User.Password != password { 
 	  return map[string]string{"message": "Invalid username or password.", "success": "false"}, nil
 	}
   
